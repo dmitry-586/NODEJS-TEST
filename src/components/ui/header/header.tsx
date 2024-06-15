@@ -45,7 +45,17 @@ export default function HeaderPage() {
         </button>
         <div className={menuActive ? burgerTrue : burgerFalse}>
           {menu.map((item) => (
-            <Link href={item.link} key={item.link}>
+            <Link
+              href={item.link}
+              key={item.link}
+              className={cn(
+                "py-1 px-2 rounded-md hover:cursor-pointer hover:bg-gray",
+                pathname === item.link ? "bg-gray" : "bg-transparent"
+              )}
+              onClick={() => {
+                setMenuActive(!menuActive);
+              }}
+            >
               {item.name}
             </Link>
           ))}
