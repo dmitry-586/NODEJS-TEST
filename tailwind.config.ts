@@ -17,7 +17,7 @@ const config: Config = {
 
       md: { max: "767px" },
 
-      sm: { max: "374px" },
+      sm: { max: "459px" },
     },
     fontFamily: {
       Brygada_1918: ["Brygada_1918"],
